@@ -143,7 +143,8 @@ var Mock = (function () {
     var edited = new Date(o.editDate || o.creationDate || collectedAt);
 
     var ch = rec.priceChanges || [];
-    var current = o.priceTotal || ((ch[0] || {}).priceData || {}).price || 0;
+    var monthlyRent = o.category === 'flatRent' && o.dealType === 'rent';
+    var current = monthlyRent ? ((o.bargainTerms || {}).price || 0) : (o.priceTotal || ((ch[0] || {}).priceData || {}).price || 0);
     var start = ch.length ? ((ch[ch.length - 1].priceData || {}).price || current) : current;
     var area = parseFloat(o.totalArea) || 0;
 
@@ -169,8 +170,8 @@ var Mock = (function () {
       snippetDescription: ((rec.serp || {}).description) || o.description || '',
       currentPrice: money(current),
       startPrice: money(start),
-      currentPricePerM: money((rec.priceInfo || {}).pricePerSquareValue || (area ? current / area : 0)),
-      startPricePerM: money(area ? start / area : 0),
+      currentPricePerM: money((rec.priceInfo || {}).pricePerSquareValue || (!monthlyRent && area ? current / area : 0)),
+      startPricePerM: money(!monthlyRent && area ? start / area : 0),
       priceDelta: current !== start ? signed(current - start) : '',
       priceHistory: history(rec, created),
 
