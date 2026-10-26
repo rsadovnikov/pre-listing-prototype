@@ -168,6 +168,9 @@ var Mock = (function () {
          Выдача может добавлять текст по поисковому запросу; сохраняем оба дословно. */
       description: o.description || '',
       snippetDescription: ((rec.serp || {}).description) || o.description || '',
+      /* Capability of this offer's author. Missing source data stays unknown. */
+      isChatsEnabled: typeof (((rec.serp || {}).user || {}).isChatsEnabled) === 'boolean'
+        ? rec.serp.user.isChatsEnabled : undefined,
       currentPrice: money(current),
       startPrice: money(start),
       currentPricePerM: money((rec.priceInfo || {}).pricePerSquareValue || (!monthlyRent && area ? current / area : 0)),

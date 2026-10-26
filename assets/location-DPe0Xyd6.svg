@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="pin/blue">
+<path id="static_fill" d="M27 0C16.507 0 8 8.507 8 19C8 30.6644 19.5164 38.5163 27 46C34.4076 38.5197 46 30.622 46 19C46 8.507 37.493 0 27 0Z" fill="#006CFD"/>
+<path id="static_fill_2" d="M27 33C34.7317 33 41 26.7317 41 19C41 11.2683 34.7317 5 27 5C19.2683 5 13 11.2683 13 19C13 26.7317 19.2683 33 27 33Z" fill-rule="evenodd" clip-rule="evenodd" fill="white"/>
+<path id="static_fill_3" d="M33.4665 19.5633V12.2365H30.2323V15.6778L27.0001 11.7947L18 22.6071L20.9939 25.099L27.0001 17.8834L33.0061 25.099L36 22.6071L33.4665 19.5633Z" fill-rule="evenodd" clip-rule="evenodd" fill="#006CFD"/>
+<circle id="static_fill_4" cx="27" cy="50" r="3" fill="white"/>
+<circle id="static_fill_5" cx="27" cy="50" r="2" fill="#006CFD"/>
+</g>
+</svg>
